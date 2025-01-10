@@ -186,3 +186,140 @@
 //     else return false
 // }
 // console.log(func(str))
+
+// 13. На входе строка. Необходимо создать функцию, возвращающую true, если это слово анаграмма и
+// false в противном случае
+
+// const str = 'мука';
+// function Anagramma(word){
+//     const arr = str.split('');
+//     return arr.every(function func(elem){
+//         if (word.includes(elem) && (word.split('').length == arr.length)) return true
+//         else return false
+//     })
+// }
+// let result = Anagramma('уамк')
+// console.log(result)
+
+// 14. На входе массив. Реализуйте 2 функции. Первая для проверки, что в массиве только числа. Вторая
+// для поиска максимального значения в массиве. Если результат функции проверки – true, то
+// вызывать новую функцию, возвращающую максимальное значение массива
+
+// const arr = [1, 2, 3, 4, 5]
+
+// function Numbers(arr){
+//     return arr.every(function func(elem){
+//         if (!isNaN(elem)) return true
+//         else return false
+//     })
+// }
+
+// function Max(arr){
+//     return arr.reduce(function maximum(max, elem){
+//         if (elem > max) return max = elem
+//         else return max
+//     }, arr[0])
+// }
+
+// if(Numbers(arr)){
+//     console.log(Max(arr))
+// }
+// else console.log('No')
+
+// 15. На входе n – количество элементов массива. Далее производится заполнение массива с
+// клавиатуры. Реализуйте 3 функции. Первая для формирования массива. Вторая для проверки, что
+// в массиве только числа. Третья для получения произведения всех элементов массива. Если
+// результат функции проверки – true, то вызывать новую функцию, возвращающую произведение
+// всех элементов массива
+
+// let n = prompt('Введите количество элементов массива')
+// function CreateArray(n){
+//     let arr = []
+//     for(let i = 0; i < n; i++){
+//         arr.push(prompt('Введите элемент массива'))
+//     }
+//     return arr
+// }
+// let array = CreateArray(n)
+
+// function Numbers(array){
+//     return array.every(function func(elem){
+//         if (!isNaN(elem)) return true
+//         else return false
+//     })
+// }
+
+// function Proiz(array){
+//     return array.reduce(function proiz(res, elem){
+//         return res*=elem
+//     }, 1)
+// }
+
+// if (Numbers(array)) console.log(Proiz(array))
+// else console.log('No')
+
+// 16. На входе n – количество элементов массива. Далее производится заполнение массива с
+// клавиатуры. Реализуйте 3 функции. Первая для формирования массива. Вторая для проверки, что
+// в массиве только числа. Третья для формирования массива из всех четных чисел, возведенных в
+// квадрат. Если результат функции проверки – true, то вызывать новую функцию, возвращающую
+// массив из всех четных чисел, возведенных в квадрат
+
+// let n = prompt('Введите количество элементов массива')
+// function CreateArray(n){
+//     let arr = []
+//     for(let i = 0; i < n; i++){
+//         arr.push(prompt('Введите элемент массива'))
+//     }
+//     return arr
+// }
+// let array = CreateArray(n)
+
+// function Numbers(array){
+//     return array.every(function func(elem){
+//         if (!isNaN(elem)) return true
+//         else return false
+//     })
+// }
+
+// function NewArray(array){
+//     let arr = array.filter(function filt(elem)
+//     {if (elem % 2 == 0) return true 
+//         else return false}
+//     )
+//     return arr.map(function ArrayNew(elem){
+//         return elem**2
+//     })
+// }
+
+// if (Numbers(array)) console.log(NewArray(array))
+// else console.log('No')
+
+// 17. Написать функцию, принимающую в параметрах строку текста в маленьком регистре. Разбить
+// строку на массив. Функция должна вернуть строку, где каждый элемент массива в чередование
+// регистров toLowerCase, toUpperCase
+// hschool -> HsChOoL
+
+// const str = prompt('Введите строку').toLowerCase();
+
+// function func(str){
+//     const arr = str.split('');
+//     return arr.map(function(elem, index){
+//         if(index % 2 == 0) return elem.toUpperCase()
+//         else return elem.toLowerCase()
+//     })
+// }
+
+// const result = func(str)
+// console.log(result.join(''))
+
+// 18. Написать функцию, принимающую в параметрах дату в формат “xx/xx/xxxx”. Функция должна
+// преобразовать строку в формат “xxxx-xx-xx”. 
+
+// const data = prompt('Введите дату в формате xx/xx/xxxx');
+
+// function func(data){
+//     return data.split('/').reverse().join('-');
+// }
+
+// const result = func(data);
+// console.log(result)
